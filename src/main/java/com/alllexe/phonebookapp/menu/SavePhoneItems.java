@@ -6,7 +6,6 @@
 package com.alllexe.phonebookapp.menu;
 
 import com.alllexe.phonebookapp.Application;
-import com.alllexe.phonebookapp.model.User;
 import com.alllexe.phonebookapp.model.Users;
 import com.alllexe.phonebookapp.service.UserService;
 import org.slf4j.Logger;

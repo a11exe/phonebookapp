@@ -21,6 +21,7 @@
         <spring.version>5.1.7.RELEASE</spring.version>
         <spring-data-jpa.version>2.1.9.RELEASE</spring-data-jpa.version>
         <jackson-json.version>2.11.1</jackson-json.version>
+        <dbh2.version>1.4.187</dbh2.version>
 
         <!-- Logging -->
         <logback.version>1.2.3</logback.version>
@@ -128,13 +129,6 @@
             <version>${spring-data-jpa.version}</version>
         </dependency>
 
-        <!--&lt;!&ndash;test&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-test</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
         <!--Database-->
         <dependency>
             <groupId>postgresql</groupId>
@@ -179,6 +173,12 @@
 
         <!--Test-->
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.jupiter.version}</version>
@@ -206,12 +206,11 @@
             <scope>test</scope>
         </dependency>
 
-        <!--<dependency>-->
-        <!--<groupId>org.slf4j</groupId>-->
-        <!--<artifactId>jul-to-slf4j</artifactId>-->
-        <!--<version>${slf4j.version}</version>-->
-        <!--<scope>runtime</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${dbh2.version}</version>
+        </dependency>
 
     </dependencies>
 
