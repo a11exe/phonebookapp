@@ -1,6 +1,6 @@
 # Phone book app
 Console phone book app.
-Spring / Hibernate / Postgresql
+Spring / Hibernate / Postgresql / H2 Database (for tests)
 
 ## Install
 
