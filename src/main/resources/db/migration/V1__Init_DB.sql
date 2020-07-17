@@ -1,12 +1,12 @@
 create table usr (
-  id      int8 not null,
-  name    varchar(255) not null,
+  id            serial,
+  name          varchar(255) not null,
   primary key (id)
 );
 create table phones (
-  user_id int8 not null,
-  phone   varchar(255),
-  id      int8 not null,
+  user_id       int8,
+  phoneNumber   varchar(255),
+  id            serial,
   primary key (id)
 );
 

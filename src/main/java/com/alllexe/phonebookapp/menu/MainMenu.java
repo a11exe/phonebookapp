@@ -45,6 +45,7 @@ public class MainMenu implements MenuItem {
     public void action() {
 
         while (!exit) {
+            System.out.println();
             System.out.println("Please select menu item:");
             System.out.println(getName());
             String str = scanner.nextLine();

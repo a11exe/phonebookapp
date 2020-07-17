@@ -20,10 +20,10 @@
         </encoder>
     </appender>
 
-    <logger name="com.alllexe.phonebookapp" level="debug"/>
+    <!--<logger name="com.alllexe.phonebookapp" level="debug"/>-->
     <!--<logger name="org.springframework.jdbc.datasource" level="debug"/>-->
 
-    <root level="info">
+    <root level="error">
         <!--<appender-ref ref="file"/>-->
         <appender-ref ref="console"/>
     </root>
