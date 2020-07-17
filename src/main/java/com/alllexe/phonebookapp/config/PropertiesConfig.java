@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource("classpath:app.properties")
+@PropertySource("classpath:menu.properties")
 public class PropertiesConfig {
 }

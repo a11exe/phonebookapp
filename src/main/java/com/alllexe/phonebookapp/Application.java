@@ -29,7 +29,9 @@ public class Application {
         // Load Spring application context
         try {
             applicationContext =
-                    new ClassPathXmlApplicationContext("spring/spring-app.xml");
+                    new ClassPathXmlApplicationContext(
+                            "spring/spring-app.xml",
+                            "spring/spring-db.xml");
 
             List<MenuItem> menuItemList = new ArrayList<>();
             menuItemList.add(applicationContext.getBean(AddPhoneItem.class));
