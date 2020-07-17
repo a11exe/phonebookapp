@@ -1,19 +1,33 @@
 package com.alllexe.phonebookapp.model;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name="usr")
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @XmlAttribute(required = true)
     private Integer id;
     @Column(name = "name")
+    @XmlAttribute (required = true)
     private String username;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @XmlElementWrapper(name="phones")
+    @XmlElement(name="phone")
     private List<Phone> phones;
 
     public String getUsername() {

@@ -8,18 +8,28 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.Objects;
 
 @Entity
 @Table(name="phones")
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Phone {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @XmlAttribute(required = true)
     private Integer id;
+    @XmlAttribute (required = true)
     private String phoneNumber;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
+    @XmlTransient
     private User user;
 
     public Integer getId() {

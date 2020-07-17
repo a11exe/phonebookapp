@@ -22,7 +22,6 @@ public class GetPhoneItems implements MenuItem {
 
     @Value("${get.phone.items}")
     private String name;
-
     @Autowired
     private UserService userService;
 

@@ -5,7 +5,7 @@
     <jmxConfigurator/>
 
     <!--<appender name="file" class="ch.qos.logback.core.FileAppender">-->
-        <!--<file>${VOTING_ROOT}/log/phonebookapp.log</file>-->
+        <!--<file>/log/phonebookapp.log</file>-->
 
         <!--<encoder>-->
             <!--<charset>UTF-8</charset>-->
