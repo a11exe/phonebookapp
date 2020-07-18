@@ -15,7 +15,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Users {
 
-    @XmlElement(name = "users")
+    @XmlElement(name = "user")
     private List<User> users;
 
     public List<User> getUsers() {

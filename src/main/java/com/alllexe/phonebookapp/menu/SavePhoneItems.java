@@ -50,10 +50,10 @@ public class SavePhoneItems implements MenuItem {
             Marshaller m = context.createMarshaller();
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             m.marshal(users, new File("userPhones.xml"));
+            System.out.println("Saved to: userPhones.xml");
         } catch (JAXBException e) {
             System.out.println("Can't save to XML");
-            //logger.error(e.getMessage());
-            throw new RuntimeException(e);
+            logger.error(e.getMessage());
         }
 
     }
