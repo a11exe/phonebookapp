@@ -2,6 +2,8 @@
 Console phone book app.
 Spring / Hibernate / Postgresql / H2 Database (for tests)
 
+![App screenshot](phoneapp.png)
+
 ## Install
 
     git clone https://github.com/a11exe/phonebookapp
